@@ -337,9 +337,13 @@ __attribute__((weak)) bool achordion_chord(uint16_t tap_hold_keycode,
                                            keyrecord_t* other_record) {
   //in teoria dovrebbe escludere i thumb cluster e le righe al di sotto la homerow mods
   //if (other_record->event.key.row % (MATRIX_ROWS / 2) >= 3) { return true; }
-  //esclude i thumb key dal processo
+  //esclude i thumb key dal processo, in teoria le righe dei thumb key sono la 4 e la 9
+  // quindi lo shift del thum key dovrebbe funzionare sia con la parte sx che dx
   if (tap_hold_record->event.key.row == 4 || tap_hold_record->event.key.row == 9 ) { return true; }
-  if (other_record->event.key.row == 4 || other_record->event.key.row == 9) { return true; }
+  //i modificatori su home row mods devono funzionare su entrambi i thumb key
+  //in teoria cosi dovrebbe funzionare sulla voyager
+  if (other_record->event.key.row % (MATRIX_ROWS / 2) > 3) { return true; }
+  //if (other_record->event.key.row == 4 || other_record->event.key.row == 9) { return true; }
   
   return achordion_opposite_hands(tap_hold_record, other_record);
 }
