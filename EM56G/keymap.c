@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRAVE,       KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,        
     OSM(MOD_LCTL),  KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                           KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           MT(MOD_RCTL, KC_SLASH),
     OSM(MOD_LALT),  KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_QUOTE,       OSM(MOD_LGUI),  
-                                                    MT(MOD_LSFT, KC_BSPC),LT(3,KC_TAB),                                   LT(2,KC_ENTER), KC_SPACE
+                                                    LT(4,KC_BSPC),  LT(3,KC_TAB),                                   LT(2,KC_ENTER), KC_SPACE
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -47,14 +47,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_ASTR,                                        KC_SLASH,       KC_1,           KC_2,           KC_3,           KC_COLN,        TO(1),          
     KC_NO,          MT(MOD_LGUI, KC_F5),MT(MOD_LALT, KC_F6),MT(MOD_LSFT, KC_F7),MT(MOD_LCTL, KC_F8),KC_PLUS,                                        KC_DOT,         KC_4,           KC_5,           KC_6,           KC_COMMA,       KC_NO,          
     KC_NO,          KC_F9,          KC_F10,         KC_F11,         KC_F12,         KC_MINUS,                                       KC_BSLS,        KC_7,           KC_8,           KC_9,           KC_0,           KC_NO,          
-                                                    KC_BSPC,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case MT(MOD_LSFT, KC_BSPC):
+        case LT(4,KC_BSPC):
             return TAPPING_TERM -50;
         case LT(3,KC_TAB):
             return TAPPING_TERM -50;
