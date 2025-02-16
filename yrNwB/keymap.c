@@ -42,8 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                     KC_BSPC,        MO(4),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_ergodox_pretty(
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
-    KC_NO,          KC_ESCAPE,      LCTL(LSFT(KC_TAB)),LCTL(KC_F),     LCTL(KC_TAB),   KC_INSERT,      KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CAPS,        KC_HOME,        KC_UP,          KC_END,         KC_DELETE,      KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(0),
+    KC_NO,          KC_ESCAPE,      LCTL(LSFT(KC_TAB)),LCTL(KC_F),     LCTL(KC_TAB),   KC_INSERT,      KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_CAPS,        KC_HOME,        KC_UP,          KC_END,         KC_DELETE,      TO(1),
     KC_NO,          OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_RALT),                                                                  LALT(LCTL(KC_BSPC)),KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_BSPC,        KC_NO,
     KC_NO,          LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     KC_LEFT_GUI,    LCTL(KC_V),     KC_NO,                                          KC_NO,          KC_ESCAPE,      KC_PAGE_UP,     KC_TAB,         KC_PGDN,        KC_ENTER,       KC_NO,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
